@@ -8,16 +8,18 @@
  */
 int main(void)
 {
-	char la;
+	int n= 97;
 
-	for (la = 'a'; la <= 'z'; la++)
+	while (n <= 122)
 	{
-		if (la != 'c' && la != 'q')
-			putchar(la);
+		if (n == 101 || n == 113)
+		{
+			n++;
+			continue;
+		}
+		putchar(n);
+		n++;
 	}
-
 	putchar('\n');
-
 	return (0);
 }
-
