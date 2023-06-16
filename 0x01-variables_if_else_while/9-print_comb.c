@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 /**
  * main - Empty point
- * Description: 'print comb of numbers'
- * Return: always 0
+ * Description: Prints combinations of numbers
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
