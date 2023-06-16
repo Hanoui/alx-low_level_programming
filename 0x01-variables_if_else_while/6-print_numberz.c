@@ -3,20 +3,19 @@
 #include <time.h>
 
 /**
- * main -Empty point
- * Description: 'print number of base 10 using putchar'
- * Return: Always 0
+ * main - Empty point
+ *
+ * Description: Prints numbers of base 10 using putchar
+ *
+ * Return: Always 0 (Success)
  */
-
-
 int main(void)
-
 {
-        int d;
+	int d;
 
-        for (d = '0'; d <= '9'; d++)
-	putchar(d);
-        putchar('\n');
-       
+	for (d = '0'; d <= '9'; d++)
+		putchar(d);
+	putchar('\n');
+
 	return (0);
 }
