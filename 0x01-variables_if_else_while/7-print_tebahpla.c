@@ -1,8 +1,11 @@
 #include <stdio.h>
+
 /**
- * main -Empty point
- * Description: 'print alphabets in reverse'
- * Return: Always 0
+ * main - Empty point
+ *
+ * Description: Prints alphabets in reverse
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
@@ -16,4 +19,3 @@ int main(void)
 	putchar('\n');
 	return (0);
 }
-	
