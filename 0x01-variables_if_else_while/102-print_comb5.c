@@ -18,23 +18,23 @@
  */
 int main(void)
 {
-	int num1, num2, num3, num4;
+	int n1, n2, n3, n4;
 
-	for (num1 = 0; num1 < 10; num1++)
+	for (n1 = 0; n1 < 10; n1++)
 	{
-		for (num2 = 0; num2 < 10; num2++)
+		for (n2 = 0; n2 < 10; n2++)
 		{
-			for (num3 = num1; num3 < 10; num3++)
+			for (n3 = n1; n3 < 10; n3++)
 			{
-				for (num4 = (num3 == num1) ? num2 + 1 : 0; num4 < 10; num4++)
+				for (n4 = (n3 == n1) ? n2 + 1 : 0; n4 < 10; n4++)
 				{
-					putchar((num1 % 10) + '0');
-					putchar((num2 % 10) + '0');
+					putchar((n1 % 10) + '0');
+					putchar((n2 % 10) + '0');
 					putchar(' ');
-					putchar((num3 % 10) + '0');
-					putchar((num4 % 10) + '0');
+					putchar((n3 % 10) + '0');
+					putchar((n4 % 10) + '0');
 
-					if (num1 == 9 && num2 == 8 && num3 == 9 && num4 == 9)
+					if (n1 == 9 && n2 == 8 && n3 == 9 && n4 == 9)
 						continue;
 
 					putchar(',');
