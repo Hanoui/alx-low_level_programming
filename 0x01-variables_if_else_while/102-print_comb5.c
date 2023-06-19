@@ -24,9 +24,9 @@ int main(void)
 	{
 		for (d2 = 0; d2 < 10; d2++)
 		{
-			for (d3 = 0; d3 < 10; d3++)
+			for (d3 = d1; d3 < 10; d3++)
 			{
-				for (d4 = d2 + 1; d4 < 10; d4++)
+				for (d4 = (d3 == d1) ? d2 + 1 : 0; d4 < 10; d4++)
 				{
 					putchar(d1 + '0');
 					putchar(d2 + '0');
