@@ -18,23 +18,23 @@
  */
 int main(void)
 {
-	int d1, d2, d3, d4;
+	int num1, num2, num3, num4;
 
-	for (d1 = 0; d1 < 10; d1++)
+	for (num1 = 0; num1 < 10; num1++)
 	{
-		for (d2 = 0; d2 < 10; d2++)
+		for (num2 = 0; num2 < 10; num2++)
 		{
-			for (d3 = d1; d3 < 10; d3++)
+			for (num3 = num1; num3 < 10; num3++)
 			{
-				for (d4 = (d3 == d1) ? d2 + 1 : 0; d4 < 10; d4++)
+				for (num4 = (num3 == num1) ? num2 + 1 : 0; num4 < 10; num4++)
 				{
-					putchar(d1 + '0');
-					putchar(d2 + '0');
+					putchar((num1 % 10) + '0');
+					putchar((num2 % 10) + '0');
 					putchar(' ');
-					putchar(d3 + '0');
-					putchar(d4 + '0');
+					putchar((num3 % 10) + '0');
+					putchar((num4 % 10) + '0');
 
-					if (d1 == 9 && d2 == 8 && d3 == 9 && d4 == 9)
+					if (num1 == 9 && num2 == 8 && num3 == 9 && num4 == 9)
 						continue;
 
 					putchar(',');
