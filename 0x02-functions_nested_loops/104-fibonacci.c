@@ -21,6 +21,8 @@ int main(void)
 		current = next;
 		if (count % 5 == 0)
 			printf("\n\t\t");
+		else if (count != 98)
+			printf(", ");
 	}
 
 	printf("\n");
