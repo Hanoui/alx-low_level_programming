@@ -3,10 +3,13 @@
 /**
  * print_times_table - Prints the n times table, starting with 0.
  * @n: The number of times to print the table.
+ *
+ * Description: This function prints the multiplication table
+ * up to the given number n, following a specific format.
  */
 void print_times_table(int n)
 {
-	int i, j;
+	int i, j, result;
 
 	if (n > 15 || n < 0)
 		return;
@@ -15,52 +18,36 @@ void print_times_table(int n)
 	{
 		for (j = 0; j <= n; j++)
 		{
-			int result = i * j;
+			result = i * j;
 
-			if (j != 0)
+			if (j == 0)
+				_putchar('0');
+			else if (result < 10)
 			{
-				_putchar(',');
 				_putchar(' ');
-
-				if (result < 10)
-					_putchar(' ');
-
-				if (result < 100)
-					_putchar(' ');
+				_putchar(' ');
+				_putchar(result + '0');
 			}
-
-			if (result >= 100)
-			{
-				_putchar(result / 100 + '0');
-				_putchar((result / 10) % 10 + '0');
-			}
-			else if (result >= 10)
+			else if (result >= 10 && result < 100)
 			{
 				_putchar(' ');
 				_putchar(result / 10 + '0');
+				_putchar(result % 10 + '0');
+			}
+			else
+			{
+				_putchar(result / 100 + '0');
+				_putchar((result / 10) % 10 + '0');
+				_putchar(result % 10 + '0');
 			}
 
-			_putchar(result % 10 + '0');
+			if (j != n)
+			{
+				_putchar(',');
+				_putchar(' ');
+			}
 		}
 		_putchar('\n');
 	}
-}
-
-/**
- * main - Entry point
- *
- * Return: Always 0
- */
-int main(void)
-{
-	print_times_table(3);
-	_putchar('\n');
-	print_times_table(5);
-	_putchar('\n');
-	print_times_table(98);
-	_putchar('\n');
-	print_times_table(12);
-
-	return (0);
 }
 
