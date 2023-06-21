@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_times_table - Prints the n times table, starting with 0
+ * print_times_table - Prints n, starting with 0
  * @n: The number of times table to print
  *
  * Return: void
@@ -43,7 +43,7 @@ void print_times_table(int n)
  * _putchar - Writes a character to stdout
  * @c: The character to print
  *
- * Return: On success 1. On error, -1 is returned, and errno is set appropriately.
+ * Return: On success 1. On error, -1 is returned, and errno is appropriately
  */
 int _putchar(char c)
 {
