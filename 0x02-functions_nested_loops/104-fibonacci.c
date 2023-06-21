@@ -1,6 +1,18 @@
 #include "main.h"
 
 /**
+ * _putchar - Writes a character to the standard output (stdout)
+ *
+ * @c: The character to be written
+ *
+ * Return: On success, return the character written. On error, return -1.
+ */
+int _putchar(char c)
+{
+    return write(1, &c, 1);
+}
+
+/**
  * print_fibonacci - Prints the Fibonacci sequence up to a given number
  *
  * @n: The number of Fibonacci numbers to print
