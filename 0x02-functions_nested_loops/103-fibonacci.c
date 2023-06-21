@@ -7,21 +7,20 @@
  */
 int main(void)
 {
-    unsigned long int prev = 1, current = 2, next;
-    unsigned long int sum = 0;
+	unsigned long int prev = 1, current = 2, next;
+	unsigned long int sum = 0;
 
-    while (current <= 4000000)
-    {
-        if (current % 2 == 0)
-            sum += current;
+	while (current <= 4000000)
+	{
+		if (current % 2 == 0)
+			sum += current;
 
-        next = prev + current;
-        prev = current;
-        current = next;
-    }
+		next = prev + current;
+		prev = current;
+		current = next;
+	}
 
-    printf("%lu\n", sum);
+	printf("%lu\n", sum);
 
-    return 0;
+	return (0);
 }
-
