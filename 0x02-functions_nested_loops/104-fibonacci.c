@@ -8,20 +8,17 @@
 int main(void)
 {
 	int count;
-	unsigned long int prev = 1, current = 2, next;
+	unsigned int first = 1, second = 2, next;
 
-	printf("%lu", prev);
+	printf("%u, %u", first, second);
 
-	for (count = 2; count <= 98; count++)
+	for (count = 3; count <= 98; count++)
 	{
-		printf(", %lu", current);
+		next = first + second;
+		printf(", %u", next);
 
-		next = prev + current;
-		prev = current;
-		current = next;
-
-		if (count % 5 == 0)
-			printf("\n\t\t");
+		first = second;
+		second = next;
 	}
 
 	printf("\n");
