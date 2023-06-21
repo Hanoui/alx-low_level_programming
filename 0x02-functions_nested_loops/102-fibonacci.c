@@ -7,20 +7,20 @@
  */
 int main(void)
 {
-	int i;
-	unsigned long int prev = 1, current = 2, next;
+    int i;
+    unsigned long int prev = 1, current = 2, next;
 
-	printf("%lu, %lu", prev, current);
+    printf("%lu, %lu", prev, current);
 
-	for (i = 3; i <= 50; i++)
-	{
-		next = prev + current;
-		printf(", %lu", next);
-		prev = current;
-		current = next;
-	}
+    for (i = 3; i <= 50; i++)
+    {
+        next = prev + current;
+        printf(", %lu", next);
+        prev = current;
+        current = next;
+    }
 
-	printf("\n");
+    printf("\n");
 
-	return 0;
+    return 0;
 }
