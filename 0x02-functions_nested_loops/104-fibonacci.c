@@ -10,22 +10,21 @@ int main(void)
 	int count;
 	unsigned long int prev = 1, current = 2, next;
 
-	printf("%lu, %lu", prev, current);
+	printf("%lu", prev);
 
-	for (count = 3; count <= 98; count++)
+	for (count = 2; count <= 98; count++)
 	{
-		next = prev + current;
-		printf(", %lu", next);
+		printf(", %lu", current);
 
+		next = prev + current;
 		prev = current;
 		current = next;
+
 		if (count % 5 == 0)
 			printf("\n\t\t");
-		else if (count != 98)
-			printf(", ");
 	}
 
 	printf("\n");
 
-	return (0);
+	return 0;
 }
