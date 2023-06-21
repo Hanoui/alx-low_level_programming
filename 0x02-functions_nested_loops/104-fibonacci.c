@@ -27,7 +27,7 @@ int main(void)
 
         if (fib1_half2 + fib2_half2 > 99999999999)
         {
-            half1 += 1;
+            half1 = 1;
             half2 %= 10000000000;
         }
 
@@ -44,5 +44,5 @@ int main(void)
 
     printf("\n");
 
-    return (0);
+    return 0;
 }
