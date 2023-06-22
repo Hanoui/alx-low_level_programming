@@ -20,4 +20,7 @@ int _putchar(char c);
 void fizz_buzz(void);
 
 
+int _putchar(char c);
+void print_triangle(int size);
+
 #endif /* MAIN_H */
