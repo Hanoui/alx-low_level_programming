@@ -22,5 +22,9 @@ void fizz_buzz(void);
 
 int _putchar(char c);
 void print_triangle(int size);
+void _putchar(char c);
+int _putchar(char c);
+void print_number(int n);
+int _putchar(char c);
 
 #endif /* MAIN_H */
