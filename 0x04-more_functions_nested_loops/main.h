@@ -19,9 +19,8 @@ void print_square(int size);
 int _putchar(char c);
 void print_triangle(int size);
 long int largest_prime_factor(long int n);
-void _putchar(char c);
-void print_number(int n);
 int _putchar(char c);
+void print_number(int n);
 
 
 #endif /* MAIN_H */
