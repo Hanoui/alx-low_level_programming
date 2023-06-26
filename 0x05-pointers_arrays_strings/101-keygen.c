@@ -28,9 +28,11 @@ int main(void)
 		sum += password[i];
 	}
 
-	password[i] = 2772 - sum;
+	password[i] = '0' + (sum % 10); // Fix: Calculate last character
 
-	printf("%s", password);
+	password[i + 1] = '\0'; // Null-terminate the password
+
+	printf("%s\n", password);
 
 	return (0);
 }
