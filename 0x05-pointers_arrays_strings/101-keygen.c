@@ -12,7 +12,6 @@ int main(void)
 {
     int i, sum;
     char password[84];
-    char expected_password[] = "Tada! Congrats";
 
     srand(time(0));
 
@@ -31,11 +30,6 @@ int main(void)
     password[i - 1] = sum;
 
     printf("%s\n", password);
-
-    if (strcmp(password, expected_password) == 0)
-        printf("Correct password: %s\n", expected_password);
-    else
-        printf("Wrong password\n");
 
     return 0;
 }
