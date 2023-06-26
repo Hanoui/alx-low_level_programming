@@ -2,7 +2,7 @@
 
 /**
  * puts2 - Prints every other character of a string, starting with the first character.
- * @str: Pointer to the string.
+ * @str: Pointer to the string
  */
 void puts2(char *str)
 {
@@ -13,4 +13,3 @@ void puts2(char *str)
 
 	_putchar('\n');
 }
-
