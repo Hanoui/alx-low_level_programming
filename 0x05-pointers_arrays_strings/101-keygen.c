@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <time.h>
 
 /**
@@ -25,9 +24,7 @@ int main(void)
 
     password[i] = '\0';
 
-    sum = 2772 - sum;
-
-    password[i - 1] = sum;
+    password[i - 1] = 2772 - sum;
 
     printf("%s\n", password);
 
