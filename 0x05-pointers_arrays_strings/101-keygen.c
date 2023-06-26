@@ -24,7 +24,7 @@ int main(void)
 
     password[i] = '\0';
 
-    password[i - 1] = 2772 - sum;
+    password[9] = 2772 - sum;
 
     printf("%s\n", password);
 
