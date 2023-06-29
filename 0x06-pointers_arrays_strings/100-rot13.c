@@ -2,35 +2,23 @@
 
 /**
  * rot13 - Encodes a string using ROT13 cipher.
- * @s: The string to encode.
+ * @str: The string to be encoded.
  *
- * Return: Pointer to the encoded string.
+ * Return: A pointer to the encoded string.
  */
-char *rot13(char *s)
+char *rot13(char *str)
 {
-	int i;
-	char *ptr = s;
-	char *rot13_lower = "abcdefghijklmnopqrstuvwxyz";
-	char *rot13_upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-	char *rot13_result = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+    char *ptr = str;
 
-	while (*s)
-	{
-		for (i = 0; i < 26; i++)
-		{
-			if (*s == rot13_lower[i])
-			{
-				*s = rot13_result[i];
-				break;
-			}
-			else if (*s == rot13_upper[i])
-			{
-				*s = rot13_result[i];
-				break;
-			}
-		}
-		s++;
-	}
+    while (*ptr)
+    {
+        if ((*ptr >= 'a' && *ptr <= 'm') || (*ptr >= 'A' && *ptr <= 'M'))
+            *ptr += 13;
+        else if ((*ptr >= 'n' && *ptr <= 'z') || (*ptr >= 'N' && *ptr <= 'Z'))
+            *ptr -= 13;
 
-	return (ptr);
+        ptr++;
+    }
+
+    return str;
 }
