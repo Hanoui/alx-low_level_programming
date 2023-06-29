@@ -1,10 +1,9 @@
-#include "print_number.h"
 #include "main.h"
 
 /**
  * main - check the code
  *
- * Return: Always 0
+ * Return: Always 0.
  */
 int main(void)
 {
