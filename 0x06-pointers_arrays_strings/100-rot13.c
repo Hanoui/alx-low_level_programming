@@ -1,4 +1,4 @@
-#include "main.h"
+#include "rot13.h"
 
 /**
  * rot13 - Encodes a string using ROT13 cipher.
@@ -9,13 +9,23 @@
 char *rot13(char *str)
 {
     char *ptr = str;
+    int i;
+
+    char rot13[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    char ROT13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
     while (*ptr)
     {
-        if ((*ptr >= 'a' && *ptr <= 'm') || (*ptr >= 'A' && *ptr <= 'M'))
-            *ptr += 13;
-        else if ((*ptr >= 'n' && *ptr <= 'z') || (*ptr >= 'N' && *ptr <= 'Z'))
-            *ptr -= 13;
+        i = 0;
+        while (rot13[i])
+        {
+            if (*ptr == rot13[i])
+            {
+                *ptr = ROT13[i];
+                break;
+            }
+            i++;
+        }
 
         ptr++;
     }
