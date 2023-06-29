@@ -16,15 +16,13 @@ char *rot13(char *str)
 
     while (*ptr)
     {
-        i = 0;
-        while (rot13[i])
+        for (i = 0; rot13[i]; i++)
         {
             if (*ptr == rot13[i])
             {
                 *ptr = ROT13[i];
                 break;
             }
-            i++;
         }
 
         ptr++;
@@ -32,4 +30,3 @@ char *rot13(char *str)
 
     return str;
 }
-
