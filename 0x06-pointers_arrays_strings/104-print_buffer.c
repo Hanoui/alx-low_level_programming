@@ -35,17 +35,13 @@ void print_buffer(char *b, int size)
 
 		for (j = 0; j < 10; j++)
 		{
-			if (i + j < size)
-			{
-				if (isprint(p[i + j]))
-					printf("%c", p[i + j]);
-				else
-					printf(".");
-			}
+			if (i + j >= size)
+				break;
+
+			if (isprint(p[i + j]))
+				printf("%c", p[i + j]);
 			else
-			{
-				printf(" ");
-			}
+				printf(".");
 		}
 
 		printf("\n");
