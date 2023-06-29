@@ -13,6 +13,7 @@ char *cap_string(char *str);
 void reverse_array(int *a, int n);
 int _strcmp(char *s1, char *s2);
 char *leet(char *str);
+char *rot13(char *);
 
 
 
