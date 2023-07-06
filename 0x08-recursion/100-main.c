@@ -2,25 +2,25 @@
 #include <stdio.h>
 
 /**
- * main - Check the code
+ * main - Entry point
  *
  * Return: Always 0
  */
 int main(void)
 {
-    int r;
+	int r;
 
-    r = is_palindrome("abcddcba");
-    printf("%d\n", r);
+	r = is_palindrome("abcddcba");
+	printf("%d\n", r);
 
-    r = is_palindrome("abcdcba");
-    printf("%d\n", r);
+	r = is_palindrome("abcdcba");
+	printf("%d\n", r);
 
-    r = is_palindrome("abcdecba");
-    printf("%d\n", r);
+	r = is_palindrome("abcdecba");
+	printf("%d\n", r);
 
-    r = is_palindrome("I guess I thought the dream-space would be all about the visual, but it's more about the feeling. My question is what happens when you start messing with the physics of it.ti fo scisyhp eht htiw gnissem trats uoy nehw sneppah tahw si noitseuq yM .gnileef eht tuoba erom s'ti tub ,lausiv eht tuoba lla eb dluow ecaps-maerd eht thguoht I sseug I");
-    printf("%d\n", r);
+	r = is_palindrome("I guess I thought the dream-space would be all about the visual, but it's more about the feeling. My question is what happens when you start messing with the physics of it.ti fo scisyhp eht htiw gnissem trats uoy nehw sneppah tahw si noitseuq yM .gnileef eht tuoba erom s'ti tub ,lausiv eht tuoba lla eb dluow ecaps-maerd eht thguoht I sseug I");
+	printf("%d\n", r);
 
-    return (0);
+	return (0);
 }
