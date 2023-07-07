@@ -1,21 +1,22 @@
-#include "main.h"
-
-/**
- * _strcmp - Compares two strings
- * @s1: The first string
- * @s2: The second string
- *
- * Return: Difference between the ASCII values of the first non-matching characters,
- * or 0 if the strings are equal
- */
-int _strcmp(char *s1, char *s2)
+char *_strncpy(char *dest, char *src, int n)
 {
-    while (*s1 && (*s1 == *s2))
+    char *ptr = dest;
+
+    while (*src && n > 0)
     {
-        s1++;
-        s2++;
+        *dest = *src;
+        dest++;
+        src++;
+        n--;
     }
 
-    return (*s1 - *s2);
+    while (n > 0)
+    {
+        *dest = '\0';
+        dest++;
+        n--;
+    }
+
+    return ptr;
 }
 

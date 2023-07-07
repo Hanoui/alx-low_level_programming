@@ -1,15 +1,14 @@
-char *_strcpy(char *dest, char *src)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
     char *ptr = dest;
 
-    while (*src)
+    while (n > 0)
     {
         *dest = *src;
         dest++;
         src++;
+        n--;
     }
-
-    *dest = '\0';
 
     return ptr;
 }
