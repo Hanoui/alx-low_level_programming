@@ -1,17 +1,16 @@
 #include "main.h"
-#include <unistd.h>
 
 /**
- * _puts - Print a string
- * @s: The string to print
+ * _puts - Prints a string followed by a new line to the standard output
+ * @s: The string to be printed
  */
 void _puts(char *s)
 {
-    int i = 0;
+	int i = 0;
 
-    while (s[i] != '\0')
-    {
-        _putchar(s[i]);
-        i++;
-    }
+	while (s[i] != '\0')
+	{
+		_putchar(s[i]);
+		i++;
+	}
 }
