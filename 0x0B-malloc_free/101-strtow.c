@@ -26,6 +26,22 @@ int count_words(char *str)
 }
 
 /**
+ * copy_word - Copies a word from source to destination
+ * @src: The source string
+ * @dest: The destination string
+ * @len: The length of the word
+ */
+void copy_word(char *src, char *dest, int len)
+{
+	int i;
+
+	for (i = 0; i < len; i++)
+		dest[i] = src[i];
+
+	dest[len] = '\0';
+}
+
+/**
  * strtow - Splits a string into words
  * @str: The input string
  *
@@ -70,12 +86,14 @@ char **strtow(char *str)
 				return (NULL);
 			}
 
-			for (j = 0; j < len; j++)
-				words[word_count][j] = str[i++];
-			words[word_count][j] = '\0';
+			copy_word(&str[i], words[word_count], len);
 			word_count++;
+			i = j;
 		}
-		i++;
+		else
+		{
+			i++;
+		}
 	}
 
 	words[word_count] = NULL;
