@@ -34,7 +34,7 @@ int count_words(char *str)
 char **strtow(char *str)
 {
 	char **words;
-	int i, j, k, len, word_count = 0, in_word = 0;
+	int i, j, k, len, word_count = 0;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
@@ -48,13 +48,11 @@ char **strtow(char *str)
 		return (NULL);
 
 	i = 0;
+	word_count = 0;
 	while (str[i] != '\0')
 	{
-		if (str[i] == ' ')
-			in_word = 0;
-		else if (in_word == 0)
+		if (str[i] != ' ')
 		{
-			in_word = 1;
 			len = 0;
 			j = i;
 			while (str[j] != ' ' && str[j] != '\0')
@@ -75,7 +73,7 @@ char **strtow(char *str)
 			for (j = 0; j < len; j++)
 				words[word_count][j] = str[i++];
 			words[word_count][j] = '\0';
-			word_count--;
+			word_count++;
 		}
 		i++;
 	}
