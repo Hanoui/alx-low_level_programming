@@ -42,26 +42,15 @@ void copy_word(char *src, char *dest, int len)
 }
 
 /**
- * strtow - Splits a string into words
+ * allocate_words - Allocates memory for storing words
  * @str: The input string
+ * @words: Pointer to the array of words
  *
- * Return: Pointer to an array of strings (words), or NULL on failure
+ * Return: 1 on success, 0 on failure
  */
-char **strtow(char *str)
+int allocate_words(char *str, char **words)
 {
-	char **words;
 	int i, j, k, len, word_count = 0;
-
-	if (str == NULL || str[0] == '\0')
-		return (NULL);
-
-	word_count = count_words(str);
-	if (word_count == 0)
-		return (NULL);
-
-	words = malloc(sizeof(char *) * (word_count + 1));
-	if (words == NULL)
-		return (NULL);
 
 	i = 0;
 	word_count = 0;
@@ -82,8 +71,7 @@ char **strtow(char *str)
 			{
 				for (k = 0; k < word_count; k++)
 					free(words[k]);
-				free(words);
-				return (NULL);
+				return (0);
 			}
 
 			copy_word(&str[i], words[word_count], len);
@@ -97,5 +85,36 @@ char **strtow(char *str)
 	}
 
 	words[word_count] = NULL;
+	return (1);
+}
+
+/**
+ * strtow - Splits a string into words
+ * @str: The input string
+ *
+ * Return: Pointer to an array of strings (words), or NULL on failure
+ */
+char **strtow(char *str)
+{
+	char **words;
+	int word_count;
+
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
+
+	word_count = count_words(str);
+	if (word_count == 0)
+		return (NULL);
+
+	words = malloc(sizeof(char *) * (word_count + 1));
+	if (words == NULL)
+		return (NULL);
+
+	if (!allocate_words(str, words))
+	{
+		free(words);
+		return (NULL);
+	}
+
 	return (words);
 }
