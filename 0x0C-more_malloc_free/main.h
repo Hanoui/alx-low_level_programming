@@ -7,6 +7,12 @@ void *_calloc(unsigned int nmemb, unsigned int size);
 int *array_range(int min, int max);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
 
+int _isDigit(char c);
+int _strlen(char *s);
+void _multiply(char *num1, int len1, char *num2, int len2, int *result);
+void _printResult(int *result, int size);
+int _putchar(char c);
+void _puts(char *str);
 
 
 
