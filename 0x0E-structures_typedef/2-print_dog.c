@@ -34,10 +34,10 @@ void print_dog(struct dog *d)
     {
         /* Print the name, or "(nil)" if name is NULL */
         printf("Name: %s\n", (d->name != NULL) ? d->name : "(nil)");
-        
+
         /* Print the age */
         printf("Age: %.1f\n", d->age);
-        
+
         /* Print the owner, or "(nil)" if owner is NULL */
         printf("Owner: %s\n", (d->owner != NULL) ? d->owner : "(nil)");
     }
