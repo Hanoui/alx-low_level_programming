@@ -7,7 +7,7 @@
  *
  * Description: This function prints the name, age, and owner of a dog.
  * If an element of d is NULL, print "(nil)" instead of that element.
- * If d is NULL, print nothing.
+ * If d is NULL, print "NULL".
  */
 void print_dog(struct dog *d)
 {
