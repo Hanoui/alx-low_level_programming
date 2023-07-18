@@ -6,12 +6,15 @@
  * @name: Name of the dog (string)
  * @age: Age of the dog (float)
  * @owner: Owner of the dog (string)
+ *
+ * Description: A struct representing information about a dog.
  */
 struct dog
 {
-    char *name;
-    float age;
-    char *owner;
+	char *name;
+	float age;
+	char *owner;
 };
 
 #endif /* DOG_H */
+
