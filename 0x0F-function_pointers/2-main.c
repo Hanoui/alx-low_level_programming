@@ -52,4 +52,3 @@ int main(void)
 	printf("%d\n", index);
 	return (0);
 }
-
