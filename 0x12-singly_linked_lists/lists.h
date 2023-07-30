@@ -18,7 +18,7 @@ typedef struct list_s
     struct list_s *next;
 } list_t;
 
-/* Function prototypes */
+/* Function prototype */
 size_t print_list(const list_t *h);
 
 #endif /* LISTS_H */
