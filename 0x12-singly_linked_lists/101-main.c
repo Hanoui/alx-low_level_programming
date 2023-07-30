@@ -1,6 +1,14 @@
 #include <stdio.h>
 
-void _start_asm(void);  // Correct the function name to match the assembly code
+void print_hello(void) __attribute__ ((constructor));
+
+/**
+ * print_hello - Function to print "Hello, Holberton" before main
+ */
+void print_hello(void)
+{
+	printf("Hello, Holberton\n");
+}
 
 /**
  * main - check the code
@@ -9,7 +17,6 @@ void _start_asm(void);  // Correct the function name to match the assembly code
  */
 int main(void)
 {
-    _start_asm();  // Call the assembly function with the correct name
-    return (0);
+	return (0);
 }
 
