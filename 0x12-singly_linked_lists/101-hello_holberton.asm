@@ -1,24 +1,19 @@
 section .data
-    hello db 'Hello, Holberton', 0   ; Null-terminated string
+    hello db "Hello, Holberton", 0    ; Null-terminated string
 
 section .text
-    global _start_asm  ; Change the label to _start_asm
-
-    extern printf
+    global _start_asm
 
 _start_asm:
-    ; Call the main function
-    call main
-
-    ; Exit the program
-    mov rax, 60      ; syscall number for exit
-    xor rdi, rdi     ; status code 0
+    ; Syscall to print the string
+    mov rsi, hello  ; Address of the string to print
+    mov rdi, 1      ; File descriptor 1 (stdout)
+    mov rdx, 17     ; Length of the string
+    mov rax, 1      ; System call number 1 (sys_write)
     syscall
 
-main:
-    push rbp
-    mov rdi, hello   ; Set the format string argument for printf
-    call printf      ; Call the printf function
-    pop rbp
-    ret              ; Return from main function
+    ; Exit the program
+    mov rdi, 0      ; Exit status 0
+    mov rax, 60     ; System call number 60 (sys_exit)
+    syscall
 
