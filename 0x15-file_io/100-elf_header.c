@@ -12,6 +12,12 @@ void print_os_abi(unsigned char *e_ident);
 void print_type(unsigned int e_type);
 void print_entry(unsigned long int e_entry);
 
+/**
+ * main - Entry point
+ * @argc: Argument count
+ * @argv: Argument vector
+ * Return: 0 on success, 1 on error
+ */
 int main(int argc, char *argv[])
 {
 	int fd;
@@ -66,6 +72,10 @@ int main(int argc, char *argv[])
 	return (0);
 }
 
+/**
+ * print_magic - Print ELF magic numbers
+ * @e_ident: ELF identification array
+ */
 void print_magic(unsigned char *e_ident)
 {
 	int i;
@@ -76,6 +86,10 @@ void print_magic(unsigned char *e_ident)
 	printf("\n");
 }
 
+/**
+ * print_class - Print ELF class
+ * @e_ident: ELF identification array
+ */
 void print_class(unsigned char *e_ident)
 {
 	printf("  Class:                             ");
@@ -93,6 +107,10 @@ void print_class(unsigned char *e_ident)
 	}
 }
 
+/**
+ * print_data - Print ELF data encoding
+ * @e_ident: ELF identification array
+ */
 void print_data(unsigned char *e_ident)
 {
 	printf("  Data:                              ");
@@ -110,6 +128,10 @@ void print_data(unsigned char *e_ident)
 	}
 }
 
+/**
+ * print_version - Print ELF version
+ * @e_ident: ELF identification array
+ */
 void print_version(unsigned char *e_ident)
 {
 	printf("  Version:                           %d", e_ident[EI_VERSION]);
@@ -119,6 +141,10 @@ void print_version(unsigned char *e_ident)
 		printf(" (unknown)\n");
 }
 
+/**
+ * print_os_abi - Print ELF OS/ABI
+ * @e_ident: ELF identification array
+ */
 void print_os_abi(unsigned char *e_ident)
 {
 	printf("  OS/ABI:                            ");
@@ -157,6 +183,10 @@ void print_os_abi(unsigned char *e_ident)
 	}
 }
 
+/**
+ * print_type - Print ELF type
+ * @e_type: ELF type
+ */
 void print_type(unsigned int e_type)
 {
 	printf("  Type:                              ");
@@ -183,6 +213,10 @@ void print_type(unsigned int e_type)
 	}
 }
 
+/**
+ * print_entry - Print ELF entry point address
+ * @e_entry: ELF entry point address
+ */
 void print_entry(unsigned long int e_entry)
 {
 	printf("  Entry point address:               0x%lx\n", e_entry);
